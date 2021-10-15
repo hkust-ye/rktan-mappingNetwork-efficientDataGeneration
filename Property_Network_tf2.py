@@ -153,17 +153,17 @@ def main():
 
 	np.random.seed(0)
 
-	dens_data_pre1 = np.load('dataset/dens128.npy')
+	dens_data_pre1 = np.load('dataset/cantilever/dens128.npy')
 	dens_data = dens_data_pre1[:total_train]
 	print('dens_data shape:',dens_data.shape)
-	load_data_pre1 = np.load('dataset/load128.npy')
+	load_data_pre1 = np.load('dataset/cantilever/load128.npy')
 	load_data = load_data_pre1[:total_train]
 	x_data = np.concatenate((dens_data.reshape(-1,input_dim,input_dim,1),load_data.reshape(-1,input_dim,input_dim,1)),axis=3)
-	comp_data_pre1 = np.load('dataset/comp128.npy')
+	comp_data_pre1 = np.load('dataset/cantilever/comp128.npy')
 	y_data = comp_data_pre1[:total_train]
-	test_data1 = np.load('lbeam/dataset/dens128test.npy')
-	test_data2 = np.load('lbeam/dataset/load128test.npy')
-	test_data3 = np.load('lbeam/dataset/comp128test.npy')
+	test_data1 = np.load('dataset/cantilever/dens128test.npy')
+	test_data2 = np.load('dataset/cantilever/load128test.npy')
+	test_data3 = np.load('dataset/cantilever/comp128test.npy')
 
 	perm = np.random.permutation(x_data.shape[0])
 	shuffle_input = x_data[perm]
