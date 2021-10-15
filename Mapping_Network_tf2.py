@@ -144,12 +144,12 @@ def main():
 	is_train = False
 	savefileid = 'save/savemap'+str(total_train)
 
-	data1 = np.load('dataset/comp32new.npy')
-	data2 = np.load('dataset/comp128new.npy')
+	data1 = np.load('dataset/cantilever/comp32.npy')
+	data2 = np.load('dataset/cantilever/comp128.npy')
 	x_data = data1[:total_train]
 	y_data = data2[:total_train]
-	data3 = np.load('lbeam/dataset/comp32test.npy')
-	data4 = np.load('lbeam/dataset/comp128test.npy')
+	data3 = np.load('dataset/cantilever/comp32test.npy')
+	data4 = np.load('dataset/cantilever/comp128test.npy')
 	x_data_test = data3
 	y_data_test = data4
 
